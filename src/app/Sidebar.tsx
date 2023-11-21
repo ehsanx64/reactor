@@ -24,11 +24,11 @@ export default function Sidebar() {
 
 
     return (
-        <div className="">
-            <ul className="w-full">
+        <div className="text-black dark:text-white">
+            <ul className="block w-full">
                 {mainMenu.map((i: MenuItem) => (
                     <li key={`menu-${i.url}`} >
-                        <Link key={`menu-${i.url}`} href={i.url} className={"text-white rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-900" + (pathname === i.url ? ' font-black' : '')} aria-current="page">{i.title}</Link>
+                        <Link key={`menu-${i.url}`} href={i.url} className={"rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-900" + (pathname === i.url ? ' font-black' : '')} aria-current="page">{i.title}</Link>
                     </li>
                 ))}
             </ul>
