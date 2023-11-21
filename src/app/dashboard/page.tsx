@@ -7,7 +7,7 @@ import Sidebar from '../Sidebar'
 
 export default function Dashboard() {
     return (
-        <div className='bg-white'>
+        <div className='bg-white dark:bg-black'>
             <Navbar />
 
             <div className="flex min-h-screen flex-nowrap overflow-hidden">
@@ -15,7 +15,7 @@ export default function Dashboard() {
                     <Sidebar />
                 </aside>
 
-                <main className="flex flex-col grow justify-between p-8 text-black">
+                <main className="flex flex-col grow justify-between p-8 text-black dark:text-white">
                     <h1 className='mt-3 text-3xl font-extrabold'>Dashboard</h1>
                 </main>
             </div>

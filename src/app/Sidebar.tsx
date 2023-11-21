@@ -24,7 +24,7 @@ export default function Sidebar() {
 
 
     return (
-        <div className="text-black dark:text-white">
+        <div className="text-white">
             <ul className="block w-full">
                 {mainMenu.map((i: MenuItem) => (
                     <li key={`menu-${i.url}`} >
