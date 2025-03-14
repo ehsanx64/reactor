@@ -1,9 +1,10 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router'
 
-import DashboardLayout from './layouts/DashboardLayout.jsx'
-import BasicLayout from './layouts/BasicLayout.jsx'
+import Dashboard from './layouts/Dashboard.js'
+import Basic from './layouts/Basic.jsx'
 import Main from './pages/dashboard/Main.jsx'
+import Settings from './pages/dashboard/Settings.jsx'
 import Login from './pages/Login.jsx'
 import Home from './pages/Home.jsx'
   
@@ -12,13 +13,14 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<BasicLayout />}>
+        <Route element={<Basic />}>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
         </Route>
 
-        <Route path="dashboard" element={<DashboardLayout />}>
+        <Route path="dashboard" element={<Dashboard />}>
           <Route index element={<Main />} />
+          <Route path="settings" element={<Settings />} />
         </Route>
       </Routes>
     </BrowserRouter>

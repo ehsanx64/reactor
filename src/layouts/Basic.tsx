@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router'
 
-function BasicLayout() {
+function Basic() {
   return (
     <div className="basic-layout">
       <Outlet />
@@ -8,4 +8,4 @@ function BasicLayout() {
   )
 }
 
-export default BasicLayout
+export default Basic
