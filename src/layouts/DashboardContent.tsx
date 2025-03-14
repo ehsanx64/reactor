@@ -1,6 +1,8 @@
-import { useState } from 'react'
+interface DashboardContentProps {
+  children: React.ReactNode;
+}
 
-function DashboardContent({children}) {
+function DashboardContent({children}: DashboardContentProps) {
   return (
     <div className="dashboard-content">
       {children}
@@ -9,4 +11,3 @@ function DashboardContent({children}) {
 }
 
 export default DashboardContent
-
