@@ -1,19 +1,31 @@
 import { useState } from 'react'
-import { Button } from "@/components/ui/button"
-import { MailOpen } from 'lucide-react'
+import './App.css'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import { NavLink, BrowserRouter, Routes, Route } from 'react-router'
 
-function App() {
+import DashboardLayout from './layouts/DashboardLayout.jsx'
+import BasicLayout from './layouts/BasicLayout.jsx'
+import Main from './pages/dashboard/Main.jsx'
+import Login from './pages/Login.jsx'
+import Home from './pages/Home.jsx'
+  
+function App({ children }) {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-svh">
-      <Button>
-        <MailOpen /> Login with Email
-      </Button>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<BasicLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+        </Route>
+
+        <Route path="dashboard" element={<DashboardLayout />}>
+          <Route index element={<Main />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
