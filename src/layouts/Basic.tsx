@@ -2,7 +2,7 @@ import { Outlet } from 'react-router'
 
 function Basic() {
   return (
-    <div className="basic-layout">
+    <div className="mx-auto w-full flex p-4">
       <Outlet />
     </div>
   )
