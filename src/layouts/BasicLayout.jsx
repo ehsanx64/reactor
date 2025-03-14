@@ -3,10 +3,9 @@ import { Outlet } from 'react-router'
 
 function BasicLayout() {
   return (
-    <>
-      <h1>Simple</h1>
+    <div className="basic-layout">
       <Outlet />
-    </>
+    </div>
   )
 }
 

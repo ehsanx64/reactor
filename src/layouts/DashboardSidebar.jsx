@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 function DashboardSidebar() {
   return (
-    <div className="dashboard-sidebar"></div>
+    <aside className="dashboard-sidebar"></aside>
   );
 }
 
