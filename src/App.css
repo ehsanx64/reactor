@@ -1,9 +1,0 @@
-/* Set the default cursor for buttons. */
-button, [role="button"] {
-    cursor: pointer;
-}
-
-/* Make sure disabled buttons don't get the pointer cursor. */
-:disabled {
-    cursor: default;
-}
